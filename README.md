@@ -11,15 +11,20 @@ The goal of this project is to:
 ---
 
 ## 📂 Dataset Description
-The `/data` folder contains the dataset used for this project:
+This repository contains the dataset used for this project:
 
-- **Boxoffice_Fact.csv** → Contains movie-wise box office performance data including budget, worldwide collection, and OTT platform.
+- **Movies_2025_Fact.csv** → Contains movie-wise box office performance data including budget, worldwide collection, and OTT platform.
 - **Director_dim.csv** → List of directors with their unique IDs.
 - **Language_dim.csv** → List of languages with their unique IDs.
-- **Genere_dim.csv** → List of genres with their unique IDs.
+- **Genre_dim.csv** → List of genres with their unique IDs.
 
 ---
 
+## 📈 Key Findings
+- Adventure, Comedy, and Drama have the highest average IMDb ratings in the dataset
+- Hindi-language films have the highest average box office collection
+
+---
 ## ⚙ How to Use
 1. Download this repository.
 2. Import all CSV files from the `/data` folder into your SQL environment (MySQL / SQL Server / PostgreSQL).
