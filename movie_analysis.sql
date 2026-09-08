@@ -55,6 +55,12 @@ INNER JOIN Director D ON M.DirectorID = D.Director_ID
 GROUP BY D.Director
 ORDER BY Avg_Rating DESC;
 
+-- Q: Which genres have the highest average IMDb rating?
+Select G.Genre , Avg(M.IMDb_Rating) as Average_Rating  from Movies_2025 as M
+inner join Genre as G
+on M.GenreID = G.GenreID 
+Group By G.Genre Order by Average_Rating Desc
+
 
 /* =====================
    ADVANCED QUERIES
