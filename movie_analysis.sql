@@ -23,6 +23,13 @@ SELECT COUNT(*) AS Total_Movies
 FROM Movies_2025;
 
 
+-- Q4 Which language has the highest average box office collection
+Select L.Language, Round(Avg(M.Worldwide_Collection_in_Crores),2) as Average_Box0ffice_Collection from Movies_2025 as M
+Inner join Language as L
+on
+M.LanguageID = L.LanguageID
+Group by L.Language order by Average_Box0ffice_Collection Desc
+
 /* =====================
    MODERATE QUERIES
 ===================== */
