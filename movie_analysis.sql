@@ -34,10 +34,12 @@ Group by L.Language order by Average_Box0ffice_Collection Desc
    MODERATE QUERIES
 ===================== */
 
--- Q1. Top 5 movies with highest worldwide collections
-SELECT TOP 5 Title, Worldwide_Collection_in_Crores
-FROM Movies_2025
-ORDER BY Worldwide_Collection_in_Crores DESC;
+-- Q1 : What's the average worldwide collection per director  ?
+
+Select D.Director,Round(Avg(M.Worldwide_Collection_in_Crores ),2) as Avg_WW_Colln from Director as D
+Left Join Movies_2025 as M on
+D.Director_ID = M.DirectorID 
+Group By D.Director Order by Avg_WW_Colln Desc
 
 -- Q2. Average IMDb rating by language
 SELECT L.Language,
